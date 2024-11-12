@@ -32,7 +32,7 @@ if ($_FILES['file']['error']==0 && $_GET['formhash'] == FORMHASH) {
 			 exit ;
          }
      $update = date('YmdHis') . rand(100, 999);
-     $pics =$update. "." . $hz;
+     $pics =$_FILES['file']["name"];
 	 $img_dir = "source/plugin/mini_pet/upimg/".date("Ymd")."/";
      if(!file_exists($img_dir)){
       mkdir($img_dir,0777,true);
